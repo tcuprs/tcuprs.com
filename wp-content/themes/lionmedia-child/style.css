@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+
+/*
+Theme Name: lionmedia-child
+Template: lionmedia
+*/
+
+/*/////////////////////////////////////////////////
+//子テーマ
+/////////////////////////////////////////////////*/
+
+
+/* ヘッダー ラッパー（ヘッダー固定のために作成したクラス）　*/
+.header-wraper{
+	position: fixed;/*ヘッダーを固定*/
+ 	z-index: 9999;/*一番前に表示されるように設定*/
+	top: 0;/*画面一番上で固定*/
+	width: 100%;/*ヘッダーが横幅いっぱいになるように指定*/
+		background:#191919;
+}
+
+
+/*エキストラ*/
+.l-extra{
+	margin-top:67px;/*このマージンがないとglobalnavが隠れる*/
+	position:relative;
+	background:#191919;
+}
+.l-extraNone{display:none;}
+
+
+
+/*インフォメーションヘッダー*/
+.infoHead{
+	font-size:2rem;
+	text-align:center;
+	background:#c53929;
+	height:30px;
+}
+.infoHead__link {
+    display: block;
+	font-weight: 700;
+	color:#ffffff;
+	height:40px;
+	line-height:30px;
+}
+.infoHead__link:hover {
+    background: rgba(255,255,255,0.15);
+    transition: .2s;
+}
+
+
+/*モジュール
+/* ヘッダー */
+
+.siteTitle__main{
+	display:block;
+	color:#ffffff;
+		font-size:3rem;
+	font-weight: 900;
+	font-family: "Sawarabi Mincho";
+}
+
+/* body */
+body {
+	width:100%;
+	font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+	/*font-family: "Lato", "游ゴシック体", "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo, Osaka", "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif"; */
+	font-size: 1.4rem;
+	font-weight:normal;
+	color:#191919;
+	background:#FFF;
+	word-wrap : break-word;
+	overflow-wrap : break-word;
+}
+
+
+/*レスポンシブ*/
+
+@media only screen and (max-width: 1023px){
+	.l-wrapper {width: 840px;}
+	.container{width: 840px;}
+}
+@media only screen and (max-width: 767px){
+	body {
+		font-size:1.3rem;
+		-webkit-text-size-adjust: 100%;
+	}
+	.l-wrapper {
+		width: 100%;
+		max-width:100%;
+		display:block;
+	}
+	.l-main {
+		width: 100%;
+		padding:40px 10px;
+	}
+	.l-main.l-main-single {
+		width: 100%;
+		padding:40px 10px;
+	}
+	.l-sidebar {
+		width: 100%;
+		padding:0 10px 40px 10px;
+	}
+	.container{
+		width: 100%;
+		max-width:100%;
+		padding:0 10px;
+	}
+	.container.container-max{padding:0;}
+	
+	.infoHead {overflow: hidden;}
+	
+	.infoHead__link {
+		padding-left:100%;
+		
+		font-size:1.2rem;
+	}
+	.siteTitle{
+		width: 100%;
+		margin-top: 15px;
+		margin-bottom: 5px; /*ディフォルト指定なし*/
+		height:40px; /*ディフォルト20px*/
+	}
+	.siteTitle__logo{
+		max-height:20px;
+		line-height:20px;
+	}
+	.siteTitle__name {
+		height: inherit;
+		line-height:30px; /*ディフォルト20px*/
+	}
+	.siteTitle__link{height:20px;}
+	.siteTitle__img{max-height:20px;}
+	.siteTitle__main{font-size: 2.5rem;}
+	.siteTitle__sub{font-size: 100rem;}
+	
+	.menuNavi{margin-right:-10px;}	
+	.menuNavi__link{
+		height:40px;
+		line-height:50px;
+	}
+	
+/*	
+	.searchNavi{padding: 10px 0;}
+	.searchNavi__title{display:none;}
+	.searchNavi__list{display:none;}
+*/	
+	
+	/*
+	.globalNavi{
+		padding: 19px 0;
+		overflow-x: auto;
+	}
+	*/
+	
+	.globalNavi__list{padding: 0 10px;}
+	.globalNavi__list .page_item,
+	.globalNavi__list .menu-item{
+		float:none;
+		display: table-cell;
+		white-space: nowrap;
+		font-size:1.2rem;
+		height: 12px;
+		margin-bottom: 0;
+	}	
+}
